@@ -56,6 +56,246 @@
         main {
             margin-top: 90px;
         }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 80px 40px 60px;
+            text-align: center;
+            background: #f8f8f8;
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+        
+        .hero-section h1 em {
+            font-style: italic;
+            font-family: Georgia, serif;
+        }
+        
+        .hero-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Stories Section */
+        .stories-section {
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .story-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 100px;
+            align-items: center;
+        }
+        
+        .story-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .story-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .video-placeholder {
+            background: #2a2a2a;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .video-placeholder-content {
+            text-align: center;
+        }
+        
+        .video-placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .video-placeholder-message {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-placeholder-link {
+            text-decoration: underline;
+            margin-top: 30px;
+            display: block;
+        }
+        
+        .video-placeholder-error {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .story-content h2 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .story-content h2 em {
+            font-style: italic;
+            font-family: Georgia, serif;
+        }
+        
+        .story-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            padding: 100px 40px;
+            text-align: center;
+            background: #f8f8f8;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 50px;
+            border: 2px solid #000;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .cta-section p {
+            margin-top: 30px;
+        }
+        
+        .cta-section a {
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer-section {
+            padding: 80px 40px;
+            background: #2a2a2a;
+            color: white;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .footer-section h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .footer-section p {
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid #666;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            padding: 15px 40px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background: white;
+            color: #000;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+            
+            .story-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-content h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,156 +307,143 @@
                 </a>
             </div>
             <nav class="header-nav">
-                <a href="index.html">SYNAPSE 2020</a>
                 <a href="stories.html">STORIES</a>
                 <a href="about.html">ABOUT</a>
+                <a href="team.html">OUR TEAM</a>
+                <a href="events.html">EVENTS</a>
+                <a href="speakers.html">PAST SPEAKERS</a>
                 <a href="faqs.html">FAQS</a>
             </nav>
         </div>
     </header>
     <main>
         <!-- Hero Section -->
-        <section style="padding: 80px 40px 60px; text-align: center; background: #f8f8f8;">
-            <h1 style="font-size: 4rem; font-weight: 300; margin-bottom: 30px; letter-spacing: -1px;">
-                <em style="font-style: italic; font-family: Georgia, serif;">STORIES</em> AT CMU
-            </h1>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6; color: #333;">
-                Long or short, happy or sad, or anything in-between—stories change how we think, and help us see the world in a different way. This is a platform for you.
-            </p>
+        <section class="hero-section">
+            <h1><em>STORIES</em> AT CMU</h1>
+            <p>Long or short, happy or sad, or anything in-between—stories change how we think, and help us see the world in a different way. This is a platform for you.</p>
         </section>
 
         <!-- Stories Content -->
-        <section style="padding: 60px 40px; max-width: 1400px; margin: 0 auto;">
+        <section class="stories-section">
             <!-- Story 1 - Joan -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 100px; align-items: center;">
-                <div style="background: #2a2a2a; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: white; padding: 40px; border-radius: 8px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 20px;">⚠</div>
-                        <p style="background: white; color: black; padding: 20px; border-radius: 30px; margin-bottom: 20px;">
+            <div class="story-item">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <div class="video-placeholder-icon">⚠</div>
+                        <p class="video-placeholder-message">
                             We have not been able to archive the video associated with this YouTube page.
                         </p>
-                        <p style="text-decoration: underline; margin-top: 30px;">Watch video on YouTube</p>
-                        <p style="margin-top: 10px; font-size: 0.9rem; color: #999;">Error 153<br>Video player configuration error</p>
+                        <p class="video-placeholder-link">Watch video on YouTube</p>
+                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
                     </div>
                 </div>
-                <div>
-                    <h2 style="font-size: 3.5rem; font-weight: 300; margin-bottom: 20px;">
-                        MEET <em style="font-style: italic; font-family: Georgia, serif;">JOAN.</em>
-                    </h2>
-                    <p style="font-size: 1rem; line-height: 1.8; color: #333;">
-                        She is a first-year student at Carnegie Mellon University studying Business Administration, who on coming to CMU, learned a lot about the differences between high school and college. See her story.
+                <div class="story-content">
+                    <h2>MEET <em>JOAN.</em></h2>
+                    <p>
+                        She is a first-year student at Carnegie Mellon University studying Business Administration. Coming to CMU opened her eyes to the differences between high school and college—from managing independence to navigating a rigorous academic environment. Joan shares her journey of adapting to college life, discovering new passions, and learning what it means to truly challenge yourself. Her story offers valuable insights for anyone facing big transitions.
                     </p>
                 </div>
             </div>
 
             <!-- Story 2 - Oscar -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 100px; align-items: center;">
-                <div style="background: #2a2a2a; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: white; padding: 40px; border-radius: 8px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 20px;">⚠</div>
-                        <p style="background: white; color: black; padding: 20px; border-radius: 30px; margin-bottom: 20px;">
+            <div class="story-item">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <div class="video-placeholder-icon">⚠</div>
+                        <p class="video-placeholder-message">
                             We have not been able to archive the video associated with this YouTube page.
                         </p>
-                        <p style="text-decoration: underline; margin-top: 30px;">Watch video on YouTube</p>
-                        <p style="margin-top: 10px; font-size: 0.9rem; color: #999;">Error 153<br>Video player configuration error</p>
-                        <div style="position: absolute; bottom: 20px; right: 20px;">
-                            <svg width="50" height="50" viewBox="0 0 24 24" fill="white" opacity="0.7">
-                                <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
-                            </svg>
-                        </div>
+                        <p class="video-placeholder-link">Watch video on YouTube</p>
+                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
+                        <svg style="position: absolute; bottom: 20px; right: 20px;" width="50" height="50" viewBox="0 0 24 24" fill="white" opacity="0.7">
+                            <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
+                        </svg>
                     </div>
                 </div>
-                <div>
-                    <h2 style="font-size: 3.5rem; font-weight: 300; margin-bottom: 20px;">
-                        MEET <em style="font-style: italic; font-family: Georgia, serif;">OSCAR.</em>
-                    </h2>
-                    <p style="font-size: 1rem; line-height: 1.8; color: #333;">
-                        He is a junior student at Carnegie Mellon University studying Business, Sustainability & Optimization, who has some refreshing outlooks on life based on his experiences. See his story.
+                <div class="story-content">
+                    <h2>MEET <em>OSCAR.</em></h2>
+                    <p>
+                        He is a junior student at Carnegie Mellon University studying Business, Sustainability & Optimization. Through his unique interdisciplinary studies, Oscar has developed refreshing outlooks on life, work, and purpose. He shares insights on finding balance between ambition and wellbeing, pursuing sustainability in unexpected places, and how optimizing systems—whether in business or daily life—can lead to more meaningful outcomes. His perspective challenges conventional thinking about success.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Story 3 - Maya (Example addition) -->
+            <div class="story-item">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <div class="video-placeholder-icon">⚠</div>
+                        <p class="video-placeholder-message">
+                            We have not been able to archive the video associated with this YouTube page.
+                        </p>
+                        <p class="video-placeholder-link">Watch video on YouTube</p>
+                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <h2>MEET <em>MAYA.</em></h2>
+                    <p>
+                        A sophomore Computer Science major who discovered her passion for combining technology with art. Maya shares how she overcame impostor syndrome in a male-dominated field, found her voice through creative coding projects, and learned that technical skills and creative expression aren't mutually exclusive. Her story inspires others to embrace their multifaceted identities and forge unconventional paths.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Story 4 - David (Example addition) -->
+            <div class="story-item">
+                <div class="video-placeholder">
+                    <div class="video-placeholder-content">
+                        <div class="video-placeholder-icon">⚠</div>
+                        <p class="video-placeholder-message">
+                            We have not been able to archive the video associated with this YouTube page.
+                        </p>
+                        <p class="video-placeholder-link">Watch video on YouTube</p>
+                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <h2>MEET <em>DAVID.</em></h2>
+                    <p>
+                        A senior Drama major and aspiring director who took an unconventional journey through CMU. After switching majors twice, David found his calling in theatrical storytelling. He shares lessons about embracing uncertainty, the importance of vulnerability in creative work, and how failure became his greatest teacher. His story reminds us that the most interesting paths are rarely linear.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action Section -->
-        <section style="padding: 100px 40px; text-align: center; background: #f8f8f8;">
-            <h2 style="font-size: 3rem; font-weight: 400; margin-bottom: 40px; letter-spacing: 1px;">
-                WANT TO SHARE YOUR STORY?
-            </h2>
-            <a href="https://forms.gle/gpw37wYoydr9mswd9" style="display: inline-block; padding: 15px 50px; border: 2px solid #000; color: #000; text-decoration: none; font-weight: 600; font-size: 1rem; letter-spacing: 1px; transition: all 0.3s;">
-                SHARE HERE
-            </a>
-            <p style="margin-top: 30px;">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenVDABV5TL_Fw2UxsrZUNwPl2d32hKXkiCYIoLaqEO20gh0g/viewform" style="color: #000; text-decoration: underline;">OR, NOMINATE SOMEONE ELSE.</a>
+        <section class="cta-section">
+            <h2>WANT TO SHARE YOUR STORY?</h2>
+            <a href="https://forms.gle/gpw37wYoydr9mswd9" class="btn-primary">SHARE HERE</a>
+            <p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenVDABV5TL_Fw2UxsrZUNwPl2d32hKXkiCYIoLaqEO20gh0g/viewform">OR, NOMINATE SOMEONE ELSE.</a>
             </p>
         </section>
 
         <!-- Footer Section -->
-        <section style="padding: 80px 40px; background: #2a2a2a; color: white;">
-            <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start;">
+        <section class="footer-section">
+            <div class="footer-container">
                 <div>
-                    <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">STAY IN THE LOOP</h3>
-                    <p style="margin-bottom: 30px; color: #ccc;">Sign up with your email address to receive news and updates.</p>
-                    <form style="display: flex; gap: 15px;">
-                        <input type="email" placeholder="Email Address" style="flex: 1; padding: 15px; background: transparent; border: 1px solid #666; color: white; font-size: 1rem;">
-                        <button type="submit" style="padding: 15px 40px; background: transparent; border: 2px solid white; color: white; cursor: pointer; font-weight: 600; letter-spacing: 1px;">SIGN UP</button>
+                    <h3>STAY IN THE LOOP</h3>
+                    <p>Sign up with your email address to receive news and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">SIGN UP</button>
                     </form>
                 </div>
                 <div>
-                    <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">FOLLOW</h3>
-                    <p style="margin-bottom: 15px;">
-                        <a href="https://instagram.com/tedxcmu" style="color: white; text-decoration: underline;">INSTAGRAM</a>
-                    </p>
-                    <p>
-                        <a href="https://facebook.com/tedxcmu" style="color: white; text-decoration: underline;">FACEBOOK</a>
-                    </p>
+                    <h3>FOLLOW</h3>
+                    <p><a href="https://instagram.com/tedxcmu">INSTAGRAM</a></p>
+                    <p><a href="https://facebook.com/tedxcmu">FACEBOOK</a></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <style>
-        @media (max-width: 768px) {
-            section > div[style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-            }
-            h1 {
-                font-size: 2.5rem !important;
-            }
-            h2 {
-                font-size: 2rem !important;
-            }
-        }
-    </style>
-
     <script>
         // Form handling
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for signing up!');
             this.reset();
-        });
-
-        // Button hover effect
-        document.querySelectorAll('a[style*="border"]').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.background = '#000';
-                this.style.color = '#fff';
-            });
-            btn.addEventListener('mouseleave', function() {
-                this.style.background = 'transparent';
-                this.style.color = '#000';
-            });
-        });
-
-        document.querySelectorAll('button[style*="border"]').forEach(btn => {
-            btn.addEventListener('mouseenter', function() {
-                this.style.background = '#fff';
-                this.style.color = '#000';
-            });
-            btn.addEventListener('mouseleave', function() {
-                this.style.background = 'transparent';
-                this.style.color = '#fff';
-            });
         });
     </script>
 </body>

@@ -1,13 +1,10 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Team - TEDxCMU</title>
-    
     <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1580965476789-QIUMUM7DMTD0O74JZN6P/favicon.ico?format=100w"/>
-    
     <style>
         * {
             margin: 0;
@@ -17,11 +14,11 @@
         
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #000;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
         }
         
-        /* Header Styles */
         .header {
             position: fixed;
             top: 0;
@@ -29,56 +26,43 @@
             right: 0;
             background: white;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .header-inner {
-            max-width: 1800px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 1.5vw 4vw;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .header-logo img {
-            height: 60px;
+            height: 50px;
         }
         
         .header-nav {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             align-items: center;
         }
         
         .header-nav a {
             text-decoration: none;
             color: #000;
-            font-weight: 500;
+            font-weight: 400;
             transition: opacity 0.3s;
-            font-size: 14px;
-            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
         }
         
         .header-nav a:hover {
-            opacity: 0.7;
+            opacity: 0.6;
         }
         
-        .header-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        
-        .header-icon {
-            width: 24px;
-            height: 24px;
-            fill: #000;
-        }
-        
-        /* Main Content */
         main {
-            margin-top: 120px;
+            margin-top: 90px;
             padding: 60px 40px;
             max-width: 1400px;
             margin-left: auto;
@@ -89,24 +73,18 @@
         .hero-section {
             text-align: center;
             margin-bottom: 80px;
+            padding: 40px 0;
         }
         
         .hero-icon {
             font-size: 24px;
             margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .hero-icon span {
-            display: inline-block;
         }
         
         h1 {
             font-size: 4rem;
             font-weight: 300;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             letter-spacing: -1px;
         }
         
@@ -115,10 +93,18 @@
             font-family: 'Georgia', serif;
         }
         
+        .hero-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+        
         .divider {
             width: 100%;
             height: 1px;
-            background: #000;
+            background: #ddd;
             margin: 60px 0;
         }
         
@@ -128,25 +114,28 @@
         }
         
         .section-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;
-        }
-        
-        .section-title::after {
-            content: '✦';
-            margin-left: 10px;
-            font-size: 1.5rem;
+            color: #333;
         }
         
         .team-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 50px;
             margin-bottom: 80px;
+        }
+        
+        .copresidents-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+            max-width: 900px;
+            margin: 0 auto 80px;
         }
         
         .team-member {
@@ -155,10 +144,24 @@
         
         .member-image {
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 3/4;
             overflow: hidden;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            border-radius: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+        
+        .member-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(102, 126, 234, 0.8) 0%, 
+                rgba(118, 75, 162, 0.8) 100%);
         }
         
         .member-image img {
@@ -176,34 +179,41 @@
         }
         
         .member-role {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-style: italic;
             color: #666;
-            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         
-        /* Co-Presidents special grid */
-        .copresidents-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
-            max-width: 900px;
-            margin: 0 auto 80px;
-        }
-        
-        /* Placeholder for missing images */
+        /* Placeholder variations */
         .placeholder-gradient {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, 
-                #667eea 0%, 
-                #764ba2 20%, 
-                #f093fb 40%, 
-                #4facfe 60%, 
-                #00f2fe 80%, 
-                #43e97b 100%);
-            opacity: 0.6;
+            opacity: 0.7;
+        }
+        
+        .placeholder-gradient.variant-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .placeholder-gradient.variant-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .placeholder-gradient.variant-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .placeholder-gradient.variant-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .placeholder-gradient.variant-5 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .placeholder-gradient.variant-6 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
         }
         
         /* Responsive */
@@ -229,6 +239,7 @@
             .team-grid,
             .copresidents-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
             main {
@@ -239,181 +250,252 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-inner">
             <div class="header-title-logo">
                 <a href="index.html">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1602865099876-TVYCEV7WVUZX1P2U88TH/black-tedx-logo.png?format=500w" alt="TEDxCMU">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1579562112826-U5K53QOQRTHVYL2LQWWK/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Tmgg7gjNVQ6KqMCXpm2EXA2lg5Qdw/red-tedx-logo.png?format=500w" alt="TEDxCMU">
                 </a>
             </div>
             
             <nav class="header-nav">
-                <a href="stories.html">Stories</a>
-                <a href="about.html">About</a>
-                <a href="team.html">Our Team</a>
-                <a href="events.html">Events</a>
-                <a href="speakers.html">Past Speakers</a>
-                <a href="faqs.html">FAQs</a>
+                <a href="stories.html">STORIES</a>
+                <a href="about.html">ABOUT</a>
+                <a href="team.html">OUR TEAM</a>
+                <a href="events.html">EVENTS</a>
+                <a href="speakers.html">PAST SPEAKERS</a>
+                <a href="faqs.html">FAQS</a>
             </nav>
-            
-            <div class="header-actions">
-                <a href="http://instagram.com/tedxcmu" target="_blank" aria-label="Instagram">
-                    <svg class="header-icon" viewBox="0 0 64 64">
-                        <path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"/>
-                    </svg>
-                </a>
-                <a href="http://facebook.com/tedxcmu" target="_blank" aria-label="Facebook">
-                    <svg class="header-icon" viewBox="0 0 64 64">
-                        <path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"/>
-                    </svg>
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
-            <div class="hero-icon">
-                <span>☆</span>
-                <span>☆</span>
-            </div>
+            <div class="hero-icon">☆ ☆</div>
             <h1>MEET <em>OUR TEAM</em></h1>
+            <p class="hero-description">
+                A diverse group of passionate students dedicated to bringing bold ideas to the CMU community. From curating speakers to managing logistics, our team works year-round to create unforgettable TEDx experiences.
+            </p>
             <div class="divider"></div>
         </section>
 
         <!-- Co-Presidents -->
         <section class="team-section">
+            <h2 class="section-title">Leadership</h2>
             <div class="copresidents-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <!-- Replace with actual image when available -->
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-1"></div>
                     </div>
-                    <h2 class="member-name">IRENE HONG</h2>
-                    <p class="member-role">CO-PRESIDENT</p>
+                    <h3 class="member-name">IRENE HONG</h3>
+                    <p class="member-role">Co-President</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <!-- Replace with actual image when available -->
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-2"></div>
                     </div>
-                    <h2 class="member-name">AVI GUPTA</h2>
-                    <p class="member-role">CO-PRESIDENT</p>
+                    <h3 class="member-name">AVI GUPTA</h3>
+                    <p class="member-role">Co-President</p>
                 </div>
             </div>
         </section>
 
         <!-- Speaker Curation Team -->
         <section class="team-section">
-            <h2 class="section-title">SPEAKER CURATION TEAM</h2>
+            <h2 class="section-title">Speaker Curation</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-3"></div>
                     </div>
                     <h3 class="member-name">GRACE YU</h3>
-                    <p class="member-role">HEAD OF SPEAKER CURATION</p>
+                    <p class="member-role">Head of Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-4"></div>
                     </div>
                     <h3 class="member-name">ELLIE DURR</h3>
-                    <p class="member-role">SPEAKER CURATION MEMBER</p>
+                    <p class="member-role">Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-5"></div>
                     </div>
                     <h3 class="member-name">PRIYA SHAH</h3>
-                    <p class="member-role">SPEAKER CURATION MEMBER</p>
+                    <p class="member-role">Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-6"></div>
                     </div>
                     <h3 class="member-name">MADELYN STREISFELD</h3>
-                    <p class="member-role">SPEAKER CURATION MEMBER</p>
+                    <p class="member-role">Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-1"></div>
                     </div>
                     <h3 class="member-name">STEPHANIE LU</h3>
-                    <p class="member-role">SPEAKER CURATION MEMBER</p>
+                    <p class="member-role">Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-2"></div>
                     </div>
                     <h3 class="member-name">DEEPTI AGGARWAL</h3>
-                    <p class="member-role">SPEAKER CURATION MEMBER</p>
+                    <p class="member-role">Speaker Curation</p>
                 </div>
             </div>
         </section>
 
         <!-- Finance Team -->
         <section class="team-section">
-            <h2 class="section-title">FINANCE TEAM</h2>
+            <h2 class="section-title">Finance</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-3"></div>
                     </div>
                     <h3 class="member-name">YASHIKA BATRA</h3>
-                    <p class="member-role">HEAD OF FINANCE</p>
+                    <p class="member-role">Head of Finance</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-4"></div>
                     </div>
                     <h3 class="member-name">HOPE SOWLE</h3>
-                    <p class="member-role">FINANCE MEMBER</p>
+                    <p class="member-role">Finance</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-5"></div>
                     </div>
                     <h3 class="member-name">DIYA PAUL</h3>
-                    <p class="member-role">FINANCE MEMBER</p>
+                    <p class="member-role">Finance</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-6"></div>
                     </div>
                     <h3 class="member-name">TATIANA SINELNIKOVA</h3>
-                    <p class="member-role">FINANCE MEMBER</p>
+                    <p class="member-role">Finance</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-1"></div>
                     </div>
                     <h3 class="member-name">ROHAN PATEL</h3>
-                    <p class="member-role">FINANCE MEMBER</p>
+                    <p class="member-role">Finance</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient"></div>
+                        <div class="placeholder-gradient variant-2"></div>
                     </div>
                     <h3 class="member-name">TONY CHEN</h3>
-                    <p class="member-role">FINANCE MEMBER</p>
+                    <p class="member-role">Finance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Team -->
+        <section class="team-section">
+            <h2 class="section-title">Marketing & Design</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-3"></div>
+                    </div>
+                    <h3 class="member-name">SARAH KIM</h3>
+                    <p class="member-role">Head of Marketing</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-4"></div>
+                    </div>
+                    <h3 class="member-name">MARCUS JOHNSON</h3>
+                    <p class="member-role">Social Media Manager</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-5"></div>
+                    </div>
+                    <h3 class="member-name">ALICIA RODRIGUEZ</h3>
+                    <p class="member-role">Graphic Designer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operations Team -->
+        <section class="team-section">
+            <h2 class="section-title">Operations & Logistics</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-6"></div>
+                    </div>
+                    <h3 class="member-name">JAMES CHEN</h3>
+                    <p class="member-role">Head of Operations</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-1"></div>
+                    </div>
+                    <h3 class="member-name">EMILY MARTINEZ</h3>
+                    <p class="member-role">Event Coordinator</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="placeholder-gradient variant-2"></div>
+                    </div>
+                    <h3 class="member-name">KEVIN PARK</h3>
+                    <p class="member-role">Technical Director</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer style="padding: 80px 40px; background: #2a2a2a; color: white;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start;">
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">STAY IN THE LOOP</h3>
+                <p style="color: #ccc; margin-bottom: 30px;">Sign up with your email address to receive news and updates.</p>
+                <form style="display: flex; gap: 15px;">
+                    <input type="email" placeholder="Email Address" required style="flex: 1; padding: 15px; background: transparent; border: 1px solid #666; color: white; font-size: 1rem;">
+                    <button type="submit" style="padding: 15px 40px; background: transparent; border: 2px solid white; color: white; cursor: pointer; font-weight: 600; letter-spacing: 1px;">SIGN UP</button>
+                </form>
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">FOLLOW</h3>
+                <p style="margin-bottom: 15px;"><a href="https://instagram.com/tedxcmu" style="color: white; text-decoration: underline;">INSTAGRAM</a></p>
+                <p><a href="https://facebook.com/tedxcmu" style="color: white; text-decoration: underline;">FACEBOOK</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

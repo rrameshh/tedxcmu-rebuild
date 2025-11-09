@@ -3,14 +3,21 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PAGENAME - TEDxCMU</title>
+    <title>About - TEDxCMU</title>
     <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1580965476789-QIUMUM7DMTD0O74JZN6P/favicon.ico?format=100w"/>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        
         .header {
             position: fixed;
             top: 0;
@@ -18,54 +25,126 @@
             right: 0;
             background: white;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
+        
         .header-inner {
-            max-width: 1800px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 1.5vw 4vw;
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        
         .header-logo img {
-            height: 60px;
+            height: 50px;
         }
+        
         .header-nav {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             align-items: center;
         }
+        
         .header-nav a {
             text-decoration: none;
             color: #000;
-            font-weight: 500;
+            font-weight: 400;
             transition: opacity 0.3s;
-            font-size: 14px;
-            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
         }
+        
         .header-nav a:hover {
-            opacity: 0.7;
+            opacity: 0.6;
         }
-        .header-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        .header-icon {
-            width: 24px;
-            height: 24px;
-            fill: #000;
-        }
+        
         main {
-            margin-top: 120px;
-            padding: 60px 40px;
-            text-align: center;
-            min-height: 80vh;
+            margin-top: 90px;
         }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        
+        .hero-section {
+            padding: 100px 60px;
+            background: #f8f8f8;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+        
+        .hero-section h1 em {
+            font-style: italic;
+            font-family: Georgia, serif;
+        }
+        
+        .content-section {
+            padding: 80px 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+        
+        .content-section h2 em {
+            font-style: italic;
+            font-family: Georgia, serif;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .value-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .value-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -74,34 +153,99 @@
         <div class="header-inner">
             <div class="header-title-logo">
                 <a href="index.html">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1602865099876-TVYCEV7WVUZX1P2U88TH/black-tedx-logo.png?format=500w" alt="TEDxCMU">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1579562112826-U5K53QOQRTHVYL2LQWWK/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Tmgg7gjNVQ6KqMCXpm2EXA2lg5Qdw/red-tedx-logo.png?format=500w" alt="TEDxCMU">
                 </a>
             </div>
             <nav class="header-nav">
-                <a href="stories.html">Stories</a>
-                <a href="about.html">About</a>
-                <a href="team.html">Our Team</a>
-                <a href="events.html">Events</a>
-                <a href="speakers.html">Past Speakers</a>
-                <a href="faqs.html">FAQs</a>
+                <a href="stories.html">STORIES</a>
+                <a href="about.html">ABOUT</a>
+                <a href="team.html">OUR TEAM</a>
+                <a href="events.html">EVENTS</a>
+                <a href="speakers.html">PAST SPEAKERS</a>
+                <a href="faqs.html">FAQS</a>
             </nav>
-            <div class="header-actions">
-                <a href="http://instagram.com/tedxcmu" target="_blank" aria-label="Instagram">
-                    <svg class="header-icon" viewBox="0 0 64 64">
-                        <path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"/>
-                    </svg>
-                </a>
-                <a href="http://facebook.com/tedxcmu" target="_blank" aria-label="Facebook">
-                    <svg class="header-icon" viewBox="0 0 64 64">
-                        <path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"/>
-                    </svg>
-                </a>
-            </div>
         </div>
     </header>
+    
     <main>
-        <h1>PAGENAME</h1>
-        <p>Coming Soon</p>
+        <section class="hero-section">
+            <h1><em>ABOUT</em> TEDxCMU</h1>
+        </section>
+        
+        <section class="content-section">
+            <h2>WHAT IS <em>TEDx?</em></h2>
+            <p>
+                In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event.
+            </p>
+            <p>
+                The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
+            </p>
+            
+            <h2 style="margin-top: 80px;">OUR <em>MISSION</em></h2>
+            <p>
+                TEDxCMU is Carnegie Mellon's premier platform for sharing transformative ideas. We bring together students, faculty, researchers, and community members to explore groundbreaking concepts that challenge conventional thinking and inspire action.
+            </p>
+            <p>
+                Through our main conferences, salon events, and ongoing story collection, we create spaces for authentic dialogue about the ideas shaping our world. From artificial intelligence and sustainable design to personal narratives of resilience and innovation, TEDxCMU celebrates the diversity of thought that defines the CMU community.
+            </p>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>INNOVATION</h3>
+                    <p>We showcase cutting-edge research and unconventional thinking that pushes boundaries and opens new possibilities.</p>
+                </div>
+                <div class="value-item">
+                    <h3>INCLUSION</h3>
+                    <p>We amplify diverse voices and perspectives, ensuring our platform represents the full spectrum of our community.</p>
+                </div>
+                <div class="value-item">
+                    <h3>IMPACT</h3>
+                    <p>We believe ideas have the power to create real change, and we're committed to sparking conversations that matter.</p>
+                </div>
+            </div>
+            
+            <h2 style="margin-top: 80px;">OUR <em>HISTORY</em></h2>
+            <p>
+                Since our founding, TEDxCMU has brought hundreds of speakers to our stage, from renowned researchers like Luis von Ahn (founder of Duolingo) and Subra Suresh (former NSF Director) to inspiring students sharing their personal journeys. Each event builds on our tradition of excellence while exploring new formats and themes.
+            </p>
+            <p>
+                Our annual conferences have explored themes like "Ignite" (2023), examining the spark of innovation, and various salon events throughout the year that dive deep into specific topics—from food culture to technology ethics to artistic expression.
+            </p>
+            
+            <h2 style="margin-top: 80px;">GET <em>INVOLVED</em></h2>
+            <p>
+                Whether you want to share your story, nominate a speaker, join our team, or simply attend our events, there are many ways to be part of the TEDxCMU community. We're always looking for passionate individuals who want to help spread ideas worth sharing.
+            </p>
+            <p>
+                Follow us on social media, sign up for our newsletter, and stay tuned for announcements about upcoming events and opportunities to participate.
+            </p>
+        </section>
     </main>
+    
+    <footer style="padding: 80px 40px; background: #2a2a2a; color: white;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start;">
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">STAY IN THE LOOP</h3>
+                <p style="color: #ccc; margin-bottom: 30px;">Sign up with your email address to receive news and updates.</p>
+                <form style="display: flex; gap: 15px;">
+                    <input type="email" placeholder="Email Address" required style="flex: 1; padding: 15px; background: transparent; border: 1px solid #666; color: white; font-size: 1rem;">
+                    <button type="submit" style="padding: 15px 40px; background: transparent; border: 2px solid white; color: white; cursor: pointer; font-weight: 600; letter-spacing: 1px;">SIGN UP</button>
+                </form>
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; font-weight: 400; margin-bottom: 20px; letter-spacing: 1px;">FOLLOW</h3>
+                <p style="margin-bottom: 15px;"><a href="https://instagram.com/tedxcmu" style="color: white; text-decoration: underline;">INSTAGRAM</a></p>
+                <p><a href="https://facebook.com/tedxcmu" style="color: white; text-decoration: underline;">FACEBOOK</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
