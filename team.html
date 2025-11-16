@@ -38,8 +38,8 @@
             align-items: center;
         }
         
-        .header-logo img {
-            height: 50px;
+        .header-title-logo img {
+            height: 80px;
         }
         
         .header-nav {
@@ -132,9 +132,9 @@
         
         .copresidents-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 80px;
-            max-width: 900px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1100px;
             margin: 0 auto 80px;
         }
         
@@ -144,30 +144,21 @@
         
         .member-image {
             width: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 1/1;
             overflow: hidden;
             margin-bottom: 20px;
             border-radius: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url('https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/e0c49b19-4c17-4c82-b3f5-8011013b23f6/image-asset.jpg?format=1000w') center/cover;
             position: relative;
-        }
-        
-        .member-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(102, 126, 234, 0.8) 0%, 
-                rgba(118, 75, 162, 0.8) 100%);
         }
         
         .member-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
         }
         
         .member-name {
@@ -185,40 +176,13 @@
             letter-spacing: 0.5px;
         }
         
-        /* Placeholder variations */
-        .placeholder-gradient {
-            width: 100%;
-            height: 100%;
-            opacity: 0.7;
-        }
-        
-        .placeholder-gradient.variant-1 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .placeholder-gradient.variant-2 {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .placeholder-gradient.variant-3 {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .placeholder-gradient.variant-4 {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-        }
-        
-        .placeholder-gradient.variant-5 {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        }
-        
-        .placeholder-gradient.variant-6 {
-            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-        }
-        
         /* Responsive */
         @media (max-width: 1024px) {
             .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .copresidents-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -228,7 +192,7 @@
                 display: none;
             }
             
-            .header-logo img {
+            .header-title-logo img {
                 height: 40px;
             }
             
@@ -254,10 +218,9 @@
         <div class="header-inner">
             <div class="header-title-logo">
                 <a href="index.html">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1579562112826-U5K53QOQRTHVYL2LQWWK/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Tmgg7gjNVQ6KqMCXpm2EXA2lg5Qdw/red-tedx-logo.png?format=500w" alt="TEDxCMU">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1602865099876-TVYCEV7WVUZX1P2U88TH/black-tedx-logo.png?format=150w" alt="TEDxCMU">
                 </a>
             </div>
-            
             <nav class="header-nav">
                 <a href="stories.html">STORIES</a>
                 <a href="about.html">ABOUT</a>
@@ -286,18 +249,26 @@
             <div class="copresidents-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-1"></div>
+                        <img src="tedexheadshots/stephanie_lu.JPG" alt="Stephanie Lu">
                     </div>
-                    <h3 class="member-name">IRENE HONG</h3>
+                    <h3 class="member-name">STEPHANIE LU</h3>
                     <p class="member-role">Co-President</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-2"></div>
+                        <img src="tedexheadshots/Aaron_HuSun.JPG" alt="Aaron Husun">
                     </div>
-                    <h3 class="member-name">AVI GUPTA</h3>
+                    <h3 class="member-name">AARON HUSUN</h3>
                     <p class="member-role">Co-President</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/bill_chang.JPG" alt="Bill Chang">
+                    </div>
+                    <h3 class="member-name">BILL CHANG</h3>
+                    <p class="member-role">VP</p>
                 </div>
             </div>
         </section>
@@ -308,31 +279,15 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-3"></div>
+                        <img src="tedexheadshots/Eesha_Palasamudrum.JPG" alt="Eesha Palasamudrum">
                     </div>
-                    <h3 class="member-name">GRACE YU</h3>
+                    <h3 class="member-name">EESHA PALASAMUDRAM</h3>
                     <p class="member-role">Head of Speaker Curation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-4"></div>
-                    </div>
-                    <h3 class="member-name">ELLIE DURR</h3>
-                    <p class="member-role">Speaker Curation</p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="placeholder-gradient variant-5"></div>
-                    </div>
-                    <h3 class="member-name">PRIYA SHAH</h3>
-                    <p class="member-role">Speaker Curation</p>
-                </div>
-                
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="placeholder-gradient variant-6"></div>
+                        <img src="tedexheadshots/Madelyn_Streisfeld.JPG" alt="Madelyn Streisfeld">
                     </div>
                     <h3 class="member-name">MADELYN STREISFELD</h3>
                     <p class="member-role">Speaker Curation</p>
@@ -340,132 +295,288 @@
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-1"></div>
+                        <img src="tedexheadshots/Eu-Rway_Chew.JPG" alt="Eu-Rway Chew">
                     </div>
-                    <h3 class="member-name">STEPHANIE LU</h3>
+                    <h3 class="member-name">EU-RWAY CHEW</h3>
                     <p class="member-role">Speaker Curation</p>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-2"></div>
+                        <img src="tedexheadshots/tara.JPG" alt="Tara">
                     </div>
-                    <h3 class="member-name">DEEPTI AGGARWAL</h3>
+                    <h3 class="member-name">TARA</h3>
+                    <p class="member-role">Speaker Curation</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/reagan_appel.JPG" alt="Reagan Appel">
+                    </div>
+                    <h3 class="member-name">REAGAN APPEL</h3>
+                    <p class="member-role">Speaker Curation</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/sara_chokshi.JPG" alt="Sara Chokshi">
+                    </div>
+                    <h3 class="member-name">SARA CHOKSHI</h3>
                     <p class="member-role">Speaker Curation</p>
                 </div>
             </div>
         </section>
 
-        <!-- Finance Team -->
+        <!-- Design Team -->
         <section class="team-section">
-            <h2 class="section-title">Finance</h2>
+            <h2 class="section-title">Design</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-3"></div>
+                        <img src="tedexheadshots/melissa_qin.JPG" alt="Melissa Qin">
                     </div>
-                    <h3 class="member-name">YASHIKA BATRA</h3>
-                    <p class="member-role">Head of Finance</p>
+                    <h3 class="member-name">MELISSA QIN</h3>
+                    <p class="member-role">Head of Design</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-4"></div>
+                        <img src="tedexheadshots/Jackie_Ryu.JPG" alt="Jackie Ryu">
                     </div>
-                    <h3 class="member-name">HOPE SOWLE</h3>
-                    <p class="member-role">Finance</p>
+                    <h3 class="member-name">JACKIE RYU</h3>
+                    <p class="member-role">Design</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-5"></div>
+                        <img src="tedexheadshots/stacy_chen.JPG" alt="Stacy Chen">
                     </div>
-                    <h3 class="member-name">DIYA PAUL</h3>
-                    <p class="member-role">Finance</p>
+                    <h3 class="member-name">STACY CHEN</h3>
+                    <p class="member-role">Design</p>
                 </div>
-                
+                                
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-6"></div>
+                        <img src="tedexheadshots/Garrett_Lee.JPG" alt="Garrett Lee">
                     </div>
-                    <h3 class="member-name">TATIANA SINELNIKOVA</h3>
-                    <p class="member-role">Finance</p>
+                    <h3 class="member-name">GARRETT LEE</h3>
+                    <p class="member-role">Design</p>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-1"></div>
+                        <img src="tedexheadshots/swetha_joseph.JPG" alt="Swetha Joseph">
                     </div>
-                    <h3 class="member-name">ROHAN PATEL</h3>
-                    <p class="member-role">Finance</p>
+                    <h3 class="member-name">SWETHA JOSEPH</h3>
+                    <p class="member-role">Design</p>
                 </div>
-                
+
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-2"></div>
+                        <img src="tedexheadshots/chori.JPG" alt="Chori">
                     </div>
-                    <h3 class="member-name">TONY CHEN</h3>
-                    <p class="member-role">Finance</p>
+                    <h3 class="member-name">CHORI</h3>
+                    <p class="member-role">Design</p>
                 </div>
             </div>
         </section>
 
-        <!-- Marketing Team -->
+        <!-- Innovation Team -->
         <section class="team-section">
-            <h2 class="section-title">Marketing & Design</h2>
+            <h2 class="section-title">Innovation</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-3"></div>
+                        <img src="tedexheadshots/roshni_ramesh (1).JPG" alt="Roshni Ramesh">
                     </div>
-                    <h3 class="member-name">SARAH KIM</h3>
-                    <p class="member-role">Head of Marketing</p>
+                    <h3 class="member-name">ROSHNI RAMESH</h3>
+                    <p class="member-role">Head of Innovation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-4"></div>
+                        <img src="tedexheadshots/brendon_lin.JPG" alt="Brendon Lin">
                     </div>
-                    <h3 class="member-name">MARCUS JOHNSON</h3>
-                    <p class="member-role">Social Media Manager</p>
+                    <h3 class="member-name">BRENDON LIN</h3>
+                    <p class="member-role">Innovation</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-5"></div>
+                        <img src="tedexheadshots/vincent_lo.JPG" alt="Vincent Lo">
                     </div>
-                    <h3 class="member-name">ALICIA RODRIGUEZ</h3>
-                    <p class="member-role">Graphic Designer</p>
+                    <h3 class="member-name">VINCENT LO</h3>
+                    <p class="member-role">Innovation</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/abhay_kadambi.JPG" alt="Abhay Kadambi">
+                    </div>
+                    <h3 class="member-name">ABHAY KADAMBI</h3>
+                    <p class="member-role">Innovation</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Logistics Team -->
+        <section class="team-section">
+            <h2 class="section-title">Logistics</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/luna_lee.JPG" alt="Luna Lee">
+                    </div>
+                    <h3 class="member-name">LUNA LEE</h3>
+                    <p class="member-role">Head of Logistics</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/angel_yu.JPG" alt="Angel Yu">
+                    </div>
+                    <h3 class="member-name">ANGEL YU</h3>
+                    <p class="member-role">Logistics</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/helen_fu.JPG" alt="Helen Fu">
+                    </div>
+                    <h3 class="member-name">HELEN FU</h3>
+                    <p class="member-role">Logistics</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/archita_jain.JPG" alt="Archita Jain">
+                    </div>
+                    <h3 class="member-name">ARCHITA JAIN</h3>
+                    <p class="member-role">Logistics</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/gregory_surjadi.JPG" alt="Gregory Surjadi">
+                    </div>
+                    <h3 class="member-name">GREGORY SURJADI</h3>
+                    <p class="member-role">Logistics</p>
                 </div>
             </div>
         </section>
 
-        <!-- Operations Team -->
+        <!-- Salon Team -->
         <section class="team-section">
-            <h2 class="section-title">Operations & Logistics</h2>
+            <h2 class="section-title">Salon</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-6"></div>
+                        <img src="tedexheadshots/mo_fahad.JPG" alt="Mo Fahad">
                     </div>
-                    <h3 class="member-name">JAMES CHEN</h3>
-                    <p class="member-role">Head of Operations</p>
+                    <h3 class="member-name">MO FAHAD</h3>
+                    <p class="member-role">Head of Salon</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-1"></div>
+                        <img src="tedexheadshots/sally_chen.JPG" alt="Sally Chen">
                     </div>
-                    <h3 class="member-name">EMILY MARTINEZ</h3>
-                    <p class="member-role">Event Coordinator</p>
+                    <h3 class="member-name">SALLY CHEN</h3>
+                    <p class="member-role">Salon</p>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <div class="placeholder-gradient variant-2"></div>
+                        <img src="tedexheadshots/milen_tesfaye.JPG" alt="Milen Tesfaye">
                     </div>
-                    <h3 class="member-name">KEVIN PARK</h3>
-                    <p class="member-role">Technical Director</p>
+                    <h3 class="member-name">MILEN TESFAYE</h3>
+                    <p class="member-role">Salon</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/anna_abello.JPG" alt="Anna Abello">
+                    </div>
+                    <h3 class="member-name">ANNA ABELLO</h3>
+                    <p class="member-role">Salon</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/lauren_cho.JPG" alt="Lauren Cho">
+                    </div>
+                    <h3 class="member-name">LAUREN CHO</h3>
+                    <p class="member-role">Salon</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/abby_chong.JPG" alt="Abby Chong">
+                    </div>
+                    <h3 class="member-name">ABBY CHONG</h3>
+                    <p class="member-role">Salon</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/andrew_xue.JPG" alt="Andrew Xue">
+                    </div>
+                    <h3 class="member-name">ANDREW XUE</h3>
+                    <p class="member-role">Salon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PR Team -->
+        <section class="team-section">
+            <h2 class="section-title">PR</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/waiz_mansoor.JPG" alt="Waiz Mansoor">
+                    </div>
+                    <h3 class="member-name">WAIZ MANSOOR</h3>
+                    <p class="member-role">Head of PR</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/Juhee_Park.JPG" alt="Juhee Park">
+                    </div>
+                    <h3 class="member-name">JUHEE PARK</h3>
+                    <p class="member-role">PR</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/jodie_yang.JPG" alt="Jodie Yang">
+                    </div>
+                    <h3 class="member-name">JODIE YANG</h3>
+                    <p class="member-role">PR</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/vivian_nam.JPG" alt="Vivian Nam">
+                    </div>
+                    <h3 class="member-name">VIVIAN NAM</h3>
+                    <p class="member-role">PR</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/charvi_hoysal.JPG" alt="Charvi Hoysal">
+                    </div>
+                    <h3 class="member-name">CHARVI HOYSAL</h3>
+                    <p class="member-role">PR</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="tedexheadshots/james_lee.JPG" alt="James Lee">
+                    </div>
+                    <h3 class="member-name">JAMES LEE</h3>
+                    <p class="member-role">PR</p>
                 </div>
             </div>
         </section>

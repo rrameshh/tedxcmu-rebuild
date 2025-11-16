@@ -34,8 +34,8 @@
             justify-content: space-between;
             align-items: center;
         }
-        .header-logo img {
-            height: 50px;
+        .header-title-logo img {
+            height: 80px;
         }
         .header-nav {
             display: flex;
@@ -93,7 +93,7 @@
         
         .story-item {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 60px;
             margin-bottom: 100px;
             align-items: center;
@@ -149,6 +149,23 @@
             margin-top: 10px;
             font-size: 0.9rem;
             color: #999;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         .story-content h2 {
@@ -210,7 +227,7 @@
         
         /* Footer */
         .footer-section {
-            padding: 80px 40px;
+            padding: 80px 0;
             background: #2a2a2a;
             color: white;
         }
@@ -218,6 +235,7 @@
         .footer-container {
             max-width: 1400px;
             margin: 0 auto;
+            padding: 0 40px;
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 80px;
@@ -303,7 +321,7 @@
         <div class="header-inner">
             <div class="header-title-logo">
                 <a href="index.html">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1579562112826-U5K53QOQRTHVYL2LQWWK/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Tmgg7gjNVQ6KqMCXpm2EXA2lg5Qdw/red-tedx-logo.png?format=500w" alt="TEDxCMU">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5e260b901324310e95f28460/1602865099876-TVYCEV7WVUZX1P2U88TH/black-tedx-logo.png?format=150w" alt="TEDxCMU">
                 </a>
             </div>
             <nav class="header-nav">
@@ -327,86 +345,38 @@
         <section class="stories-section">
             <!-- Story 1 - Joan -->
             <div class="story-item">
-                <div class="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <div class="video-placeholder-icon">⚠</div>
-                        <p class="video-placeholder-message">
-                            We have not been able to archive the video associated with this YouTube page.
-                        </p>
-                        <p class="video-placeholder-link">Watch video on YouTube</p>
-                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
-                    </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dd6v8gUtUj4" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
                 </div>
                 <div class="story-content">
                     <h2>MEET <em>JOAN.</em></h2>
                     <p>
-                        She is a first-year student at Carnegie Mellon University studying Business Administration. Coming to CMU opened her eyes to the differences between high school and college—from managing independence to navigating a rigorous academic environment. Joan shares her journey of adapting to college life, discovering new passions, and learning what it means to truly challenge yourself. Her story offers valuable insights for anyone facing big transitions.
+                        She is a sophomore student at Carnegie Mellon University studying Business Administration, who on coming to CMU, learned a lot about the differences between high school and college. See her story.
+
                     </p>
                 </div>
             </div>
 
             <!-- Story 2 - Oscar -->
             <div class="story-item">
-                <div class="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <div class="video-placeholder-icon">⚠</div>
-                        <p class="video-placeholder-message">
-                            We have not been able to archive the video associated with this YouTube page.
-                        </p>
-                        <p class="video-placeholder-link">Watch video on YouTube</p>
-                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
-                        <svg style="position: absolute; bottom: 20px; right: 20px;" width="50" height="50" viewBox="0 0 24 24" fill="white" opacity="0.7">
-                            <path d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"/>
-                        </svg>
-                    </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/pwPPQ8O0zEY" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
                 </div>
                 <div class="story-content">
                     <h2>MEET <em>OSCAR.</em></h2>
                     <p>
-                        He is a junior student at Carnegie Mellon University studying Business, Sustainability & Optimization. Through his unique interdisciplinary studies, Oscar has developed refreshing outlooks on life, work, and purpose. He shares insights on finding balance between ambition and wellbeing, pursuing sustainability in unexpected places, and how optimizing systems—whether in business or daily life—can lead to more meaningful outcomes. His perspective challenges conventional thinking about success.
+                        He is a junior student at Carnegie Mellon University studying Business, Sustainability & Optimization, who has some refreshing outlooks on life based on his experiences. See his story.
+
                     </p>
                 </div>
             </div>
 
-            <!-- Story 3 - Maya (Example addition) -->
-            <div class="story-item">
-                <div class="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <div class="video-placeholder-icon">⚠</div>
-                        <p class="video-placeholder-message">
-                            We have not been able to archive the video associated with this YouTube page.
-                        </p>
-                        <p class="video-placeholder-link">Watch video on YouTube</p>
-                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
-                    </div>
-                </div>
-                <div class="story-content">
-                    <h2>MEET <em>MAYA.</em></h2>
-                    <p>
-                        A sophomore Computer Science major who discovered her passion for combining technology with art. Maya shares how she overcame impostor syndrome in a male-dominated field, found her voice through creative coding projects, and learned that technical skills and creative expression aren't mutually exclusive. Her story inspires others to embrace their multifaceted identities and forge unconventional paths.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Story 4 - David (Example addition) -->
-            <div class="story-item">
-                <div class="video-placeholder">
-                    <div class="video-placeholder-content">
-                        <div class="video-placeholder-icon">⚠</div>
-                        <p class="video-placeholder-message">
-                            We have not been able to archive the video associated with this YouTube page.
-                        </p>
-                        <p class="video-placeholder-link">Watch video on YouTube</p>
-                        <p class="video-placeholder-error">Error 153<br>Video player configuration error</p>
-                    </div>
-                </div>
-                <div class="story-content">
-                    <h2>MEET <em>DAVID.</em></h2>
-                    <p>
-                        A senior Drama major and aspiring director who took an unconventional journey through CMU. After switching majors twice, David found his calling in theatrical storytelling. He shares lessons about embracing uncertainty, the importance of vulnerability in creative work, and how failure became his greatest teacher. His story reminds us that the most interesting paths are rarely linear.
-                    </p>
-                </div>
-            </div>
         </section>
 
         <!-- Call to Action Section -->
